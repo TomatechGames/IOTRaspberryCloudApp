@@ -71,6 +71,6 @@ class PiDataController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pi_datum_params
-      params.require(:pi_datum).permit(:color, :temperature, :pressure)
+      params.require(:pi_datum).permit(:color, :temperature, :pressure, :device_name)
     end
 end

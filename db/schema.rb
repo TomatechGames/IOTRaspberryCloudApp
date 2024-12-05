@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_12_04_211951) do
+ActiveRecord::Schema[7.2].define(version: 2024_12_05_180751) do
   create_table "pi_data", force: :cascade do |t|
     t.string "color"
     t.float "temperature"
     t.float "pressure"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "device_name"
   end
 end
