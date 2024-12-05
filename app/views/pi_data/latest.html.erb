@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Latest Pi data" %>
+
+<h1>Latest Pi data</h1>
+
+<div id="pi_data">
+  <% @pi_data.each do |pi_datum| %>
+    <%= render pi_datum %>
+    <p>
+      <%= link_to "Show this pi datum", pi_datum %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New pi datum", new_pi_datum_path %>

@@ -1,0 +1,11 @@
+<% content_for :title, "New pi datum" %>
+
+<h1>New pi datum</h1>
+
+<%= render "form", pi_datum: @pi_datum %>
+
+<br>
+
+<div>
+  <%= link_to "Back to pi data", pi_data_path %>
+</div>

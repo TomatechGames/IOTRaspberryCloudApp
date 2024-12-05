@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @pi_datum %>
+
+<div>
+  <%= link_to "Edit this pi datum", edit_pi_datum_path(@pi_datum) %> |
+  <%= link_to "Back to pi data", pi_data_path %>
+
+  <%= button_to "Destroy this pi datum", @pi_datum, method: :delete %>
+</div>

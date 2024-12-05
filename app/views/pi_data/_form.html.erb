@@ -1,0 +1,32 @@
+<%= form_with(model: pi_datum) do |form| %>
+  <% if pi_datum.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(pi_datum.errors.count, "error") %> prohibited this pi_datum from being saved:</h2>
+
+      <ul>
+        <% pi_datum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :color, style: "display: block" %>
+    <%= form.text_field :color %>
+  </div>
+
+  <div>
+    <%= form.label :temperature, style: "display: block" %>
+    <%= form.text_field :temperature %>
+  </div>
+
+  <div>
+    <%= form.label :pressure, style: "display: block" %>
+    <%= form.text_field :pressure %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
